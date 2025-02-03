@@ -1,0 +1,6 @@
+﻿burners,model,color,stove_h_mm,stove_w_mm,stove_d_mm,stove_h_inch,stove_w_inch,stove_d_inch,cut_off_w_mm_op1,cut_off_d_mm_op1,cut_off_w_inch_op1,cut_off_d_inch_op1,cut_off_w_mm_op2,cut_off_d_mm_op2,cut_off_w_inch_op2,cut_off_d_inch_op2,lg_burner_max_gas_mj,m_burner_max_gas_mj,s_burner_max_gas_mj,l_burner_max_gas_mj,r_burner_max_gas_mj,lg_burner_min_gas_mj,m_burner_min_gas_mj,s_burner_min_gas_mj,l_burner_min_gas_mj,r_burner_min_gas_mj,lg_burner_max_gas_kw,m_burner_max_gas_kw,s_burner_max_gas_kw,l_burner_max_gas_kw,r_burner_max_gas_kw,lg_burner_min_gas_kw,m_burner_min_gas_kw,s_burner_min_gas_kw,l_burner_min_gas_kw,r_burner_min_gas_kw,stove_weight_kg,stove_weight_lb,electric_supply,description
+3,RJH3HRM,"[""SSC""]",180,662,461,7.1,26.1,18.1,,,,,,,,,0,6.1,0,15.8,21.6,0,2.5,0,2.2,1.1,0,1.7,0,4.4,6,0,0.7,0,0.6,0.3,13,28.6,DC x 2,
+3,RJH3HR,"[""SSC"", ""SSW""]",180,662,461,7.1,26.1,18.1,,,,,,,,,0,6.1,0,21.6,21.6,0,2.5,0,1.1,1.1,0,1.7,0,6,6,0,0.7,0,0.3,0.3,12.5,27.5,DC x 2,
+2,RJH2HT,"[""SSC"", ""SSW""]",180,662,461,7.1,26.1,18.1,,,,,,,,,0,0,0,21.6,21.6,0,0,0,1.1,1.1,0,0,0,6,6,0,0,0,0.3,0.3,8,17.6,DC x 2,
+2,RJH2HP,"[""SSW""]",180,662,461,7.1,26.1,18.1,,,,,,,,,0,0,0,15.8,21.6,0,0,0,2.2,1.1,0,0,0,4.4,6,0,0,0,0.6,0.3,8.7,19.1,DC x 2,
+2,RJH2H,"[""SSG"", ""SSW""]",180,662,461,7.1,26.1,18.1,,,,,,,,,0,0,0,21.6,21.6,0,0,0,1.1,1.1,0,0,0,6,6,0,0,0,0.3,0.3,7.3,16.1,CC,

@@ -1,0 +1,10 @@
+﻿burners,model,color,stove_h_mm,stove_w_mm,stove_d_mm,stove_h_inch,stove_w_inch,stove_d_inch,cut_off_w_mm_op1,cut_off_d_mm_op1,cut_off_w_inch_op1,cut_off_d_inch_op1,cut_off_w_mm_op2,cut_off_d_mm_op2,cut_off_w_inch_op2,cut_off_d_inch_op2,lg_burner_max_gas_mj,m_burner_max_gas_mj,s_burner_max_gas_mj,l_burner_max_gas_mj,r_burner_max_gas_mj,lg_burner_min_gas_mj,m_burner_min_gas_mj,s_burner_min_gas_mj,l_burner_min_gas_mj,r_burner_min_gas_mj,lg_burner_max_gas_kw,m_burner_max_gas_kw,s_burner_max_gas_kw,l_burner_max_gas_kw,r_burner_max_gas_kw,lg_burner_min_gas_kw,m_burner_min_gas_kw,s_burner_min_gas_kw,l_burner_min_gas_kw,r_burner_min_gas_kw,stove_weight_kg,stove_weight_lb,electric_supply,description
+3,HZB53M,"[""SS""]",125,580,510,4.9,22.8,20.1,555,475,21.9,18.7,,,,,18,9,4.7,0,0,3.5,3.9,2.6,0,0,5,2.5,1.3,0,0,1,1.1,0.7,0,0,13.5,29.8,DC,
+3,SRDB63S,"[""SS""]",128,770,452,5,30.3,17.8,670,350,26.4,13.8,703,403,27.7,15.9,18,6.1,0,0,0,1.1,2.2,0,0,0,5,1.7,0,0,0,0.3,0.5,0,0,0,15.4,33.9,CC,"2 x lg_burner, 1 x m_burner"
+2,HZB62M,"[""SS""]",125,730,420,4.9,28.7,16.5,670,350,26.4,13.8,703,403,27.7,15.9,18,0,0,0,0,1.8,0,0,0,0,5,0,0,0,0,0.5,0,0,0,0,12.2,26.9,DC,2 x lg_burner
+2,SRFB62S,"[""SS""]",128,770,452,5,30.3,17.8,670,350,26.4,13.8,703,403,27.7,15.9,18,0,0,0,0,1.1,0,0,0,0,5,0,0,0,0,0.3,0,0,0,0,14.6,32.1,CC,2 x lg_burner
+2,SUZB62-G,"[""BG""]",122,750,450,4.8,29.5,17.7,670,350,26.4,13.8,,,,,17.3,0,0,0,0,1.6,0,0,0,0,4.8,0,0,0,0,0.4,0,0,0,0,15.8,34.8,DC,2 x lg_burner
+2,HZB62GPN,"[""BG""]",140,760,450,5.5,29.9,17.7,670,350,26.4,13.8,703,403,27.7,15.9,0,0,0,15.1,18,0,0,0,4,1.8,0,0,0,4.2,5,0,0,0,1.1,0.5,15.8,34.8,DC x 2,
+2,HZB62GN,"[""BG""]",140,760,450,5.5,29.9,17.7,670,350,26.4,13.8,703,403,27.7,15.9,18,0,0,0,0,1.8,0,0,0,0,5,0,0,0,0,0.5,0,0,0,0,17.3,38.1,DC x 2,2 x lg_burner
+2,HZB32G,"[""BG""]",135,288,515,5.3,11.3,20.3,265,490,10.4,19.3,,,,,9,0,4.7,0,0,4.5,0,2.3,0,0,2.5,0,1.3,0,0,1.3,0,0.7,0,0,8,17.6,DC x 2,
+1,HZB31G,"[""BG""]",135,288,515,5.3,11.3,20.3,265,490,10.4,19.3,,,,,18,0,0,0,0,1.8,0,0,0,0,5,0,0,0,0,0.5,0,0,0,0,8,17.6,DC x 2,
