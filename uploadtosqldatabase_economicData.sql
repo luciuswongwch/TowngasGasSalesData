@@ -62,8 +62,6 @@ CREATE TABLE [EconomicData].[GDP](
 [Description] [varchar](100) NOT NULL
 ) 
 
-columns4 = ["Year", "Month", "MonthNumber", "TypeOfIndex", "Index", "YearOnYearPercentageChange", "MonthToMonthPercentageChange", "Description"]
-
 CREATE TABLE [EconomicData].[CPI](
 [Year] [int] NOT NULL,
 [Month] [varchar](25) NOT NULL,
