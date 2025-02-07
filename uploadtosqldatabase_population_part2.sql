@@ -46,6 +46,16 @@ CREATE TABLE [Population].[E203e_OccupantByHousingTypeAndDistrict](
     [Description] [varchar](1000)
 )
 
+CREATE TABLE [Population].[E204e_NumberOfRoomsByHousingTypeAndDistrict](
+    [Year] [int] NOT NULL,
+    [HousingType] [varchar](100) NOT NULL,
+    [Region] [varchar](100) NOT NULL,
+    [District] [varchar](100) NOT NULL,
+    [AverageNumberOfRoomsPerHousehold] [float],
+    [AverageNumberOfRoomsPerPerson] [float],
+    [Description] [varchar](1000)
+)
+ 
 CREATE TABLE [Population].[E205e_HouseholdIncomeByHousingTypeAndDistrict](
     [Year] [int] NOT NULL,
     [HousingType] [varchar](100) NOT NULL,
@@ -63,7 +73,7 @@ CREATE TABLE [Population].[E206e_RentByHousingTypeAndDistrict](
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E207e_MedianRentToIncomeRatioByHousingTypeAndDistrict](
+CREATE TABLE [Population].[E207e_RentToIncomeRatioByHousingTypeAndDistrict](
     [Year] [int] NOT NULL,
     [HousingType] [varchar](100) NOT NULL,
     [District] [varchar](100) NOT NULL,
@@ -125,7 +135,7 @@ CREATE TABLE [Population].[E303e_HouseholdByTenureAndConstituencyArea](
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E304e_OccupiedQuartersByQuarterTypeAndConstituencyArea](
+CREATE TABLE [Population].[E304e_OccupiedQuarterByQuarterTypeAndConstituencyArea](
     [Year] [int] NOT NULL,
     [QuarterType] [varchar](100) NOT NULL,
     [District] [varchar](100) NOT NULL,

@@ -33,24 +33,24 @@ CREATE TABLE [Population].[E104e_OccupiedQuartersByQuarterTypeAndYear](
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E106ae_MortagePaymentByHousingTypeAndYear](
+CREATE TABLE [Population].[E106ae_MortgagePaymentByHousingTypeAndYear](
     [Year] [int] NOT NULL,
     [HousingType] [varchar](100) NOT NULL,
-    [MedianMonthlyMortagePayment] [float],
+    [MedianMonthlyMortgagePayment] [float],
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E106be_MortagePaymentToIncomeRatioByHousingTypeAndYear](
+CREATE TABLE [Population].[E106be_MortgagePaymentToIncomeRatioByHousingTypeAndYear](
     [Year] [int] NOT NULL,
     [HousingType] [varchar](100) NOT NULL,
-    [MedianMortagePaymentToIncomeRatio] [float],
+    [MedianMortgagePaymentToIncomeRatio] [float],
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E106ce_MortagePaymentPeriodByHousingTypeAndYear](
+CREATE TABLE [Population].[E106ce_MortgagePaymentPeriodByHousingTypeAndYear](
     [Year] [int] NOT NULL,
     [HousingType] [varchar](100) NOT NULL,
-    [MedianPeriodOfMortagePayment] [float],
+    [MedianPeriodOfMortgagePayment] [float],
     [Description] [varchar](1000)
 )
 
@@ -61,7 +61,7 @@ CREATE TABLE [Population].[E107ae_RentByQuarterTypeAndYear](
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E107be_MedianRentToIncomeRatioByQuarterTypeAndYear](
+CREATE TABLE [Population].[E107be_RentToIncomeRatioByQuarterTypeAndYear](
     [Year] [int] NOT NULL,
     [QuarterType] [varchar](100) NOT NULL,
     [MedianRentToIncomeRatio] [float],
@@ -77,18 +77,18 @@ CREATE TABLE [Population].[E108ae_HouseholdByHousingTypeAndNumberOfRooms](
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E108be_AverageNumberOfRoomsByHousingType](
+CREATE TABLE [Population].[E108be_NumberOfRoomsByHousingType](
     [Year] [int] NOT NULL,
     [HousingType] [varchar](100) NOT NULL,
-    [NumberOfRoomsPerHousehold] [float],
-    [NumberOfRoomsPerPerson] [float],
+    [AverageNumberOfRoomsPerHousehold] [float],
+    [AverageNumberOfRoomsPerPerson] [float],
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E109e_HouseholdByHousingTypeAndMortagePayment](
+CREATE TABLE [Population].[E109e_HouseholdByHousingTypeAndMortgagePayment](
     [Year] [int] NOT NULL,
     [HousingType] [varchar](100) NOT NULL,
-    [MonthlyMortagePaymentRange] [varchar](100) NOT NULL,
+    [MonthlyMortgagePaymentRange] [varchar](100) NOT NULL,
     [NumberOfHouseholds] [float],
     [Description] [varchar](1000)
 )
@@ -186,13 +186,13 @@ CREATE TABLE [Population].[E117e_HouseholdByHouseholdIncomeAndRent](
 
 CREATE TABLE [Population].[E118ae_HouseholdByYearAndHouseholdAccommodationArea](
     [Year] [int] NOT NULL,
-    [HouseholdAccommodationArea] [varchar](100) NOT NULL,
+    [HouseholdAccommodationAreaRange] [varchar](100) NOT NULL,
     [NumberOfHouseholds] [int],
     [PercentageOfHouseholds] [float],
     [Description] [varchar](100)
 )
 
-CREATE TABLE [Population].[E119e_MedianAccommodationAreaPerCapitaByYearAndHouseholdSize](
+CREATE TABLE [Population].[E119e_AccommodationAreaPerCapitaByYearAndHouseholdSize](
     [Year] [int] NOT NULL,
     [HouseholdSize] [varchar](100) NOT NULL,
     [MedianAccommodationAreaPerCapita] [float],

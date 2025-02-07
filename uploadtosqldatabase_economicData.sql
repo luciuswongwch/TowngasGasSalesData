@@ -2,54 +2,54 @@ CREATE SCHEMA MonthlyGasSales
 
 CREATE TABLE [MonthlyGasSales].[RCI](
 [Year] [int] NOT NULL,
-[Month] [varchar](25) NOT NULL,
+[Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
-[ResidentialGasSales] [float] NOT NULL,
-[CommercialGasSales] [float] NOT NULL,
-[IndustrialGasSales] [float] NOT NULL,
-[TotalGasSales] [float] NOT NULL,
-[Description] [varchar](100) NOT NULL
+[ResidentialGasSales] [float],
+[CommercialGasSales] [float],
+[IndustrialGasSales] [float],
+[TotalGasSales] [float],
+[Description] [varchar](1000)
 )
 
 CREATE TABLE [MonthlyGasSales].[TradeGroup](
 [Year] [int] NOT NULL,
-[Month] [varchar](25) NOT NULL,
+[Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
-[Type] [varchar](25) NOT NULL,
+[Type] [varchar](100) NOT NULL,
 [TradeGroup] [varchar](100) NOT NULL,
-[GasSales] [float] NOT NULL,
-[Description] [varchar](100) NOT NULL
+[GasSales] [float],
+[Description] [varchar](1000)
 )
 
 CREATE TABLE [EconomicData].[RestaurantReceipt](
 [Year] [int] NOT NULL,
-[Quarter] [varchar](25) NOT NULL,
-[Amount_of_restaurant_receipt] [float] NOT NULL,
-[Value_index_of_restaurant_receipt] [float] NOT NULL,
-[Value_index_of_restaurant_receipt_year_on_year_percentage_change] [float],
-[Volumn_index_of_restaurant_receipts] [float] NOT NULL,
-[Volumn_index_of_restaurant_receipts_year_on_year_percentage_change] [float],
-[Amount_of_restaurant_purchases] [float] NOT NULL,
-[Restaurant_purchases_year_on_year_percentage_change] [float],
-[Description] [varchar](100) NOT NULL
+[Quarter] [varchar](100) NOT NULL,
+[Amount_of_restaurant_receipt] [float],
+[ValueIndexOfReceipt] [float],
+[YearlyChangeValueIndexOfReceipt] [float],
+[VolumnIndexOfReceipts] [float],
+[YearlyChangeVolumnIndexOfReceipts] [float],
+[AmountOfRestaurantPurchases] [float],
+[YearlyChangeRestaurantPurchases] [float],
+[Description] [varchar](1000)
 ) 
 				
 CREATE TABLE [EconomicData].[ReceiptByTrade](
 [Year] [int] NOT NULL,
-[Month] [varchar](25) NOT NULL,
+[Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
-[TypeOfRestaurant] [varchar](50) NOT NULL,
-[RestaurantReceipt] [float] NOT NULL,
-[ValueIndexOfReceipt] [float] NOT NULL,
+[TypeOfRestaurant] [varchar](100) NOT NULL,
+[RestaurantReceipt] [float],
+[ValueIndexOfReceipt] [float],
 [YearlyChangeValueIndexOfReceipt] [float],
-[VolumneIndexOfReceipt] [float] NOT NULL,
+[VolumneIndexOfReceipt] [float],
 [YearlyChangeVolumeIndexOfReceipt] [float],
-[Description] [varchar](100) NOT NULL
+[Description] [varchar](1000)
 ) 
 
 CREATE TABLE [EconomicData].[GDP](
 [Year] [int] NOT NULL,
-[Quarter] [varchar](25) NOT NULL,
+[Quarter] [varchar](100) NOT NULL,
 [YearGDP] [float],
 [QuarterGDP] [float],
 [PrivateConsumptionExpenditure] [float],
@@ -59,22 +59,22 @@ CREATE TABLE [EconomicData].[GDP](
 [ExportsOfServices] [float],
 [ImportsOfGoods] [float],
 [ImportsOfServices] [float],
-[Description] [varchar](100) NOT NULL
+[Description] [varchar](1000)
 ) 
 
 CREATE TABLE [EconomicData].[CPI](
 [Year] [int] NOT NULL,
-[Month] [varchar](25) NOT NULL,
+[Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
-[TypeOfIndex] [varchar](50) NOT NULL,
+[TypeOfIndex] [varchar](100) NOT NULL,
 [Index] [float],
 [YearOnYearPercentageChange] [float],
 [MonthToMonthPercentageChange] [float],
-[Description] [varchar](100)
+[Description] [varchar](1000)
 ) 
 
 CREATE TABLE [EconomicData].[Household](
-[MonthAndYearRange] [varchar](25) NOT NULL,
+[MonthAndYearRange] [varchar](100) NOT NULL,
 [DomesticHousehold] [float],
 [AverageDomesticHouseholdSize] [float],
 [AverageDomesticHouseholdSizeExcludingForeignWorker] [float],
@@ -85,13 +85,13 @@ CREATE TABLE [EconomicData].[Household](
 [OwnerOccupierProportion] [float],
 [OwnerOccupierProportionPublicHousing] [float],
 [OwnerOccupierProportionPrivateHousing] [float],
-[Description] [varchar](100)
+[Description] [varchar](1000)
 )
 GO
 
 CREATE TABLE [EconomicData].[Visitor](
 [Year] [int] NOT NULL,
-[Month] [varchar](25) NOT NULL,
+[Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
 [VisitorArrivalAfrica] [float],
 [VisitorArrivalTheAmericas] [float],
@@ -105,15 +105,16 @@ CREATE TABLE [EconomicData].[Visitor](
 [VisitorArrivalMacao] [float],
 [VisitorArrivalNotIdentified] [float],
 [VisitorArrivalTotal] [float],
-[Description] [varchar](100)
+[Description] [varchar](1000)
 )
 
 CREATE TABLE [EconomicData].[DepartureVsArrival](
     [Year] [int] NOT NULL,
-    [Date] [varchar](25) NOT NULL,
+    [Date] [varchar](100) NOT NULL,
     [MonthNumber] [int] NOT NULL,
     [HKDeparture] [float],
-    [VisitorArrival] [float]
+    [VisitorArrival] [float],
+    [Description] [varchar](1000)
 )
 
 CREATE TABLE [EconomicData].[DepartVsArrivalByPortPx](
@@ -125,15 +126,15 @@ CREATE TABLE [EconomicData].[DepartVsArrivalByPortPx](
     [PortIDName] [varchar](50) NOT NULL,
     [PxType] [int] NOT NULL,
     [PxTypeName] [varchar](50) NOT NULL,
-    [Arrivals] [float] NOT NULL,
-    [Departures] [float] NOT NULL,
-    [Description] [varchar](100) NOT NULL
+    [Arrivals] [float],
+    [Departures] [float],
+    [Description] [varchar](1000)
 )
 
 CREATE TABLE [EconomicData].[GasVsElectSales](
-    [Date] [varchar](25) NOT NULL,
+    [Date] [varchar](100) NOT NULL,
     [Year] [int] NOT NULL,
-    [Month] [varchar](25) NOT NULL,
+    [Month] [varchar](100) NOT NULL,
     [MonthNumber] [int] NOT NULL,
     [E_Res] [float],
     [E_Com] [float],
@@ -153,19 +154,19 @@ CREATE TABLE [EconomicData].[GasVsElectSales](
 
 CREATE TABLE [EconomicData].[GasSalesByTrade](
     [Year] [int] NOT NULL,
-    [Month] [varchar](25) NOT NULL,
+    [Month] [varchar](100) NOT NULL,
     [MonthNumber] [int] NOT NULL,
     [TradeGroup] [varchar](100) NOT NULL,
     [TradeGroupType] [varchar](100) NOT NULL,
-    [MonthlyGasSales] [float] NOT NULL,
-    [Description] [varchar](1000) NOT NULL
+    [MonthlyGasSales] [float],
+    [Description] [varchar](1000)
 )
 
 CREATE TABLE [EconomicData].[HotelRoomOccupancyRate](
     [Year] [int] NOT NULL,
     [Month] [int] NOT NULL,
-    [HotelRoomOccupancyRate] [float] NOT NULL,
-    [Description] [varchar](1000) NOT NULL
+    [HotelRoomOccupancyRate] [float],
+    [Description] [varchar](1000)
 )
 
 GO
