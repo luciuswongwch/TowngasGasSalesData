@@ -33,6 +33,13 @@ CREATE TABLE [Population].[E104e_OccupiedQuartersByQuarterTypeAndYear](
     [Description] [varchar](1000)
 )
 
+CREATE TABLE [Population].[E105e_HouseholdPer1000UnitsOfQuarterByHousingTypeAndYear](
+    [Year] [int] NOT NULL,
+    [HousingType] [varchar](100) NOT NULL,
+    [AverageNumberOfHouseholdsPer1000UnitsOfQuarters] [float],
+    [Description] [varchar](1000)
+)
+
 CREATE TABLE [Population].[E106ae_MortgagePaymentByHousingTypeAndYear](
     [Year] [int] NOT NULL,
     [HousingType] [varchar](100) NOT NULL,
@@ -192,11 +199,15 @@ CREATE TABLE [Population].[E118ae_HouseholdByYearAndHouseholdAccommodationArea](
     [Description] [varchar](100)
 )
 
+CREATE TABLE [Population].[E118be_AccommodationAreaByYear](
+    [Year] [int] NOT NULL,
+    [MedianAccommodationArea] [float],
+    [Description] [varchar](1000)
+)
+
 CREATE TABLE [Population].[E119e_AccommodationAreaPerCapitaByYearAndHouseholdSize](
     [Year] [int] NOT NULL,
     [HouseholdSize] [varchar](100) NOT NULL,
     [MedianAccommodationAreaPerCapita] [float],
     [Description] [varchar](1000)
 )
-
-GO

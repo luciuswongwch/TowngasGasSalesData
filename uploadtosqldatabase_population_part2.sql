@@ -38,6 +38,15 @@ CREATE TABLE [Population].[E201ee_MortgagePaymentToIncomeRatioByDistrict](
     [Description] [varchar](1000)
 )
 
+CREATE TABLE [Population].[E202e_HouseholdPer1000UnitsOfQuarterByHousingTypeAndDistrict](
+    [Year] [int] NOT NULL,
+    [HousingType] [varchar](100) NOT NULL,
+    [Region] [varchar](100) NOT NULL,
+    [District] [varchar](100) NOT NULL,
+    [AverageNumberOfHouseholdsPer1000UnitsOfQuarters] [float],
+    [Description] [varchar](1000)
+)
+
 CREATE TABLE [Population].[E203e_OccupantByHousingTypeAndDistrict](
     [Year] [int] NOT NULL,
     [HousingType] [varchar](100) NOT NULL,
@@ -64,18 +73,18 @@ CREATE TABLE [Population].[E205e_HouseholdIncomeByHousingTypeAndDistrict](
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E206e_RentByHousingTypeAndDistrict](
+CREATE TABLE [Population].[E206e_RentByQuarterTypeAndDistrict](
     [Year] [int] NOT NULL,
-    [HousingType] [varchar](100) NOT NULL,
+    [QuarterType] [varchar](100) NOT NULL,
     [Region] [varchar](100) NOT NULL,
     [District] [varchar](100) NOT NULL,
     [MedianMonthlyRent] [int],
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [Population].[E207e_RentToIncomeRatioByHousingTypeAndDistrict](
+CREATE TABLE [Population].[E207e_RentToIncomeRatioByQuarterTypeAndDistrict](
     [Year] [int] NOT NULL,
-    [HousingType] [varchar](100) NOT NULL,
+    [QuarterType] [varchar](100) NOT NULL,
     [District] [varchar](100) NOT NULL,
     [MedianRentToIncomeRatio] [float],
     [Description] [varchar](1000)

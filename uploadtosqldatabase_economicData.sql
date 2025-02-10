@@ -1,6 +1,6 @@
 CREATE SCHEMA MonthlyGasSales
 
-CREATE TABLE [MonthlyGasSales].[RCI](
+CREATE TABLE [MonthlyGasSales].[GasSalesRCI](
 [Year] [int] NOT NULL,
 [Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
@@ -11,34 +11,37 @@ CREATE TABLE [MonthlyGasSales].[RCI](
 [Description] [varchar](1000)
 )
 
-CREATE TABLE [MonthlyGasSales].[TradeGroup](
+CREATE TABLE [MonthlyGasSales].[GasSalesByTrade](
 [Year] [int] NOT NULL,
 [Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
-[Type] [varchar](100) NOT NULL,
-[TradeGroup] [varchar](100) NOT NULL,
+[TradeType] [varchar](100) NOT NULL,
+[Trade] [varchar](100) NOT NULL,
+[TradeCode] [varchar](100) NOT NULL,
 [GasSales] [float],
 [Description] [varchar](1000)
 )
 
-CREATE TABLE [EconomicData].[RestaurantReceipt](
+CREATE SCHEMA EconomicData
+
+CREATE TABLE [EconomicData].[RestaurantReceiptAndRestaurantPurchase](
 [Year] [int] NOT NULL,
 [Quarter] [varchar](100) NOT NULL,
-[Amount_of_restaurant_receipt] [float],
+[RestaurantReceipt] [float],
 [ValueIndexOfReceipt] [float],
 [YearlyChangeValueIndexOfReceipt] [float],
-[VolumnIndexOfReceipts] [float],
-[YearlyChangeVolumnIndexOfReceipts] [float],
-[AmountOfRestaurantPurchases] [float],
-[YearlyChangeRestaurantPurchases] [float],
+[VolumnIndexOfReceipt] [float],
+[YearlyChangeVolumnIndexOfReceipt] [float],
+[RestaurantPurchase] [float],
+[YearlyChangeRestaurantPurchase] [float],
 [Description] [varchar](1000)
 ) 
 				
-CREATE TABLE [EconomicData].[ReceiptByTrade](
+CREATE TABLE [EconomicData].[RestaurantReceiptByTrade](
 [Year] [int] NOT NULL,
 [Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
-[TypeOfRestaurant] [varchar](100) NOT NULL,
+[Trade] [varchar](100) NOT NULL,
 [RestaurantReceipt] [float],
 [ValueIndexOfReceipt] [float],
 [YearlyChangeValueIndexOfReceipt] [float],
@@ -50,8 +53,8 @@ CREATE TABLE [EconomicData].[ReceiptByTrade](
 CREATE TABLE [EconomicData].[GDP](
 [Year] [int] NOT NULL,
 [Quarter] [varchar](100) NOT NULL,
-[YearGDP] [float],
-[QuarterGDP] [float],
+[YearlyChangeOverallGDP] [float],
+[QuarterlyChangeOverallGDP] [float],
 [PrivateConsumptionExpenditure] [float],
 [GovernmentConsumptionExpenditure] [float],
 [GrossDomesticFixedCapitalFormation] [float],
@@ -66,8 +69,8 @@ CREATE TABLE [EconomicData].[CPI](
 [Year] [int] NOT NULL,
 [Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
-[TypeOfIndex] [varchar](100) NOT NULL,
-[Index] [float],
+[IndexType] [varchar](100) NOT NULL,
+[IndexNumber] [float],
 [YearOnYearPercentageChange] [float],
 [MonthToMonthPercentageChange] [float],
 [Description] [varchar](1000)
@@ -75,26 +78,26 @@ CREATE TABLE [EconomicData].[CPI](
 
 CREATE TABLE [EconomicData].[Household](
 [MonthAndYearRange] [varchar](100) NOT NULL,
-[DomesticHousehold] [float],
-[AverageDomesticHouseholdSize] [float],
-[AverageDomesticHouseholdSizeExcludingForeignWorker] [float],
+[NumberOfHouseholds] [int],
+[AverageHouseholdSize] [float],
+[AverageHouseholdSizeExcludingForeignDomesticHelper] [float],
 [MedianMonthlyIncome] [float],
 [MedianMonthlyHouseholdIncomeExcludingChineseNewYearBouns] [float],
-[MedianMonthlyHouseholdIncomeExcludingForeignDomesticWorker] [float],
+[MedianMonthlyHouseholdIncomeExcludingForeignDomesticHelper] [float],
 [MedianMonthlyHouseholdIncomeOfEconomicallyActiveHousehold] [float],
 [OwnerOccupierProportion] [float],
 [OwnerOccupierProportionPublicHousing] [float],
 [OwnerOccupierProportionPrivateHousing] [float],
 [Description] [varchar](1000)
 )
-GO
+
 
 CREATE TABLE [EconomicData].[Visitor](
 [Year] [int] NOT NULL,
 [Month] [varchar](100) NOT NULL,
 [MonthNumber] [int] NOT NULL,
 [VisitorArrivalAfrica] [float],
-[VisitorArrivalTheAmericas] [float],
+[VisitorArrivalAmericas] [float],
 [VisitorArrivalsAustraliaNewZealandSouthPacific] [float],
 [VisitorArrivalEurope] [float],
 [VisitorArrivalMiddleEast] [float],
@@ -117,7 +120,7 @@ CREATE TABLE [EconomicData].[DepartureVsArrival](
     [Description] [varchar](1000)
 )
 
-CREATE TABLE [EconomicData].[DepartVsArrivalByPortPx](
+CREATE TABLE [EconomicData].[DepartureVsArrivalByPortIDAndPxType](
     [Date] [varchar](25) NOT NULL,
     [Year] [int] NOT NULL,
     [Month] [int] NOT NULL,
@@ -156,17 +159,15 @@ CREATE TABLE [EconomicData].[GasSalesByTrade](
     [Year] [int] NOT NULL,
     [Month] [varchar](100) NOT NULL,
     [MonthNumber] [int] NOT NULL,
-    [TradeGroup] [varchar](100) NOT NULL,
-    [TradeGroupType] [varchar](100) NOT NULL,
-    [MonthlyGasSales] [float],
+    [Trade] [varchar](100) NOT NULL,
+    [TradeType] [varchar](100) NOT NULL,
+    [GasSales] [float],
     [Description] [varchar](1000)
 )
 
 CREATE TABLE [EconomicData].[HotelRoomOccupancyRate](
     [Year] [int] NOT NULL,
-    [Month] [int] NOT NULL,
+    [MonthNumber] [int] NOT NULL,
     [HotelRoomOccupancyRate] [float],
     [Description] [varchar](1000)
 )
-
-GO
